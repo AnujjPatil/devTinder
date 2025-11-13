@@ -10,9 +10,10 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-   "dev":"nodemon src/app.js"
+    "dev": "nodemon src/app.js"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3"
   }
 }
