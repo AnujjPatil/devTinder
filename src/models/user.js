@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
     firstName: {
         type:String,
         required:true,
+        index:true,
     minlength: [2, "First name must be at least 2 characters"],
       maxlength: [50, "First name must be at most 50 characters"],
       trim: true,
@@ -40,7 +41,7 @@ const userSchema = new mongoose.Schema({
     },
      gender: {
         type:String,
-        required:true,
+        
         validate(value){
             if(!["male", "female","others"].includes(value)){
                throw new Error("Invalid gender data")
