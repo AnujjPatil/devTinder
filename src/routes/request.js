@@ -71,6 +71,7 @@ if(!connectionRequest){
    return res.status(400).json({message:"connection request not found"})
 }
 
+connectionRequest.status = status;
 const data= await connectionRequest.save()
 res.json({message:"Connection request "+status, data})
 
